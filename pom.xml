@@ -69,6 +69,74 @@
     <module>xwiki-platform-tools</module>
     <module>xwiki-platform-core</module>
   </modules>
+
+  <repositories>
+    <repository>
+      <id>nexus.xwiki.org</id>
+      <name>XWiki Maven Remote Repository for Releases</name>
+      <url>http://nexus.xwiki.org/nexus/content/repositories/releases/</url>
+      <releases>
+        <enabled>true</enabled>
+        <checksumPolicy>fail</checksumPolicy>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+        <checksumPolicy>fail</checksumPolicy>
+      </snapshots>
+    </repository>
+
+    <repository>
+      <releases>
+        <enabled>true</enabled>
+        <checksumPolicy>fail</checksumPolicy>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+        <checksumPolicy>fail</checksumPolicy>
+      </snapshots>
+      <id>nexus.xwiki-public-snapshots.org</id>
+      <name>XWiki Maven Remote Repository for Snapshots</name>
+      <url>http://nexus.xwiki.org/nexus/content/repositories/public-snapshots/</url>
+    </repository>
+
+    <repository>
+      <releases>
+        <enabled>true</enabled>
+        <checksumPolicy>fail</checksumPolicy>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+        <checksumPolicy>fail</checksumPolicy>
+      </snapshots>
+      <id>nexus.xwiki-externals.org</id>
+      <name>XWiki Maven Remote Repository for Snapshots</name>
+      <url>http://nexus.xwiki.org/nexus/content/repositories/externals/</url>
+    </repository>
+
+    <repository>
+      <releases>
+        <enabled>true</enabled>
+        <checksumPolicy>fail</checksumPolicy>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+        <checksumPolicy>fail</checksumPolicy>
+      </snapshots>
+      <id>nexus.xwiki-public.org</id>
+      <name>XWiki Maven Remote Repository for Snapshots</name>
+      <url>http://nexus.xwiki.org/nexus/content/repositories/public/</url>
+    </repository>
+
+    <repository>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <id>central</id>
+      <name>Central Repository</name>
+      <url>https://repo.maven.apache.org/maven2</url>
+    </repository>
+  </repositories>
+
   <build>
     <plugins>
       <plugin>
@@ -158,7 +226,7 @@
           <dependency>
             <groupId>org.xwiki.commons</groupId>
             <artifactId>xwiki-commons-tool-test-simple</artifactId>
-            <version>${project.version}</version>
+            <version>7.1.4</version>
           </dependency>
         </dependencies>
       </plugin>
