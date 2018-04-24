@@ -20,6 +20,7 @@
 # ---------------------------------------------------------------------------
 
 set -e
+set +x 
 
 action="${1}"
 
@@ -30,8 +31,10 @@ do
     moduleMap["|${module}|"]="true"
 done
 
+target_dir="$(pwd)/target"
+mkdir -p ${target_dir}
 
-output_temp="$(pwd)/out.tmp"
+output_temp="${target_dir}/out.tmp"
 echo "" > ${output_temp}
 
 traverse() (
@@ -81,7 +84,7 @@ traverse() (
 traverse "$(pwd)"
 #echo "$(pwd)/${pom_file}" >> ${output_temp}
 
-output="out.txt"
+output="${target_dir}/out.txt"
 
 cat ${output_temp} | sort -u > ${output}
 

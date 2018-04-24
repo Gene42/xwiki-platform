@@ -20,12 +20,12 @@
 # ---------------------------------------------------------------------------
 
 #output=$(git diff --name-only origin/stable-7.1.x xwiki-7.1.4-gene42 | grep -v ".pom.xml" | cut -d"/"  -f -3 | sort -u)
-output=$(git diff --name-only origin/stable-7.1.x xwiki-7.1.4-gene42 | grep -v "pom.xml" | sed -e "s|/src/.*||g" | awk -F "/" '{print $NF}' | sort -u)
+output=$(git diff --name-only origin/stable-7.1.x origin/xwiki-7.1.4-gene42 | grep -v "pom.xml" | sed -e "s|/src/.*||g" | awk -F "/" '{print $NF}' | sort -u)
 
 #git diff --name-only origin/stable-7.1.x xwiki-7.1.4-gene42 | grep -v "pom.xml"
 
-all_files=$(git diff --name-only origin/stable-7.1.x xwiki-7.1.4-gene42)
-all_files_no_poms=$(git diff --name-only origin/stable-7.1.x xwiki-7.1.4-gene42 | grep -v "pom.xml")
+all_files=$(git diff --name-only origin/stable-7.1.x origin/xwiki-7.1.4-gene42)
+all_files_no_poms=$(git diff --name-only origin/stable-7.1.x origin/xwiki-7.1.4-gene42 | grep -v "pom.xml")
 all_files=${all_files_no_poms}
 
 declare -A map
