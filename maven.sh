@@ -21,16 +21,18 @@
 
 set -e
 
+action="${1}"
+
 declare -A moduleMap
 
 for module in $(echo $(./diff.sh))
 do
-    moduleMap["${module}"]="true"
+    moduleMap["|${module}|"]="true"
 done
 
 
-output="$(pwd)/out.tmp"
-echo "" > ${output}
+output_temp="$(pwd)/out.tmp"
+echo "" > ${output_temp}
 
 traverse() (
    folder="${1}"
@@ -43,27 +45,65 @@ traverse() (
 
       current_folder="$(pwd)"
 
-      if [ "${artifact_id}" ] && [ "${moduleMap["${artifact_id}"]}" = "true" ]; then
-          #mvn --non-recursive -U install
+      modules=$(cat "${pom_file}" | grep \<module\>.*\</module\> | cat)
+      commented_out_modules=$(cat "${pom_file}" | grep \<module\>.*\</module\> | grep  \<\!--.*--\> | cat)
+      module_dir=$(pwd | sed -e 's|/|\n|g' | tail -n 1)
 
-          echo "${current_folder}/${pom_file}" >> ${output}
-          echo "yes"
+      if [ "${artifact_id}" ] && [ "${moduleMap["|${artifact_id}|"]}" = "true" ]; then
+          echo "${current_folder}" >> ${output_temp}
+          echo "${module_dir}"
       else
+          #if [ "${modules}" ] && [ -z "${commented_out_modules}" ]; then
+             #sed -e 's|<module>|<!--<module>|g' -e 's|</module>|</module>-->|g' -i "${pom_file}"
+          #fi
+          has_any_sub_module=
           for folder in $(ls)
           do
              if [ -d "${folder}" ] && [ "${folder}" != "target" ] && [ "${folder}" != "src" ]; then
-                response=$(traverse "${current_folder}/${folder}")
+                module=$(traverse "${current_folder}/${folder}")
 
-                if [ "${response}" = "yes" ]; then
-                  echo "${current_folder}/${pom_file}" >> ${output}
+                if [ "${module}" ]; then
+                  #sed -e "s|<\!--<module>${module}</module>-->|<module>${module}</module>|g" -i "${pom_file}"
+
+                  echo "${current_folder}" >> ${output_temp}
+                  has_any_sub_module="${module}"
                 fi
              fi
           done
+
+          if [ "${has_any_sub_module}" ]; then
+            echo "${module_dir}"
+          fi
       fi
    fi
 )
 
 traverse "$(pwd)"
+#echo "$(pwd)/${pom_file}" >> ${output_temp}
 
-cat ${output} | sort -u > "out.txt"
+output="out.txt"
 
+cat ${output_temp} | sort -u > ${output}
+
+current_folder="$(pwd)"
+
+while read -r line; do
+  if [ "${line}" ]; then
+     case "${action}" in
+     ls|"")
+        echo "${line}"
+        ;;
+     deploy|install)
+        #echo "deploy"
+        cd ${line}
+        mvn --non-recursive "${action}" -DskipTests
+        ;;
+     *)
+        echo "Unknown action, allowed [ls, deploy]"
+        ;;
+     esac
+  fi
+done < ${output}
+
+rm ${output_temp}
+rm ${output}
