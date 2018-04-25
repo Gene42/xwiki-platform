@@ -27,6 +27,7 @@
     <artifactId>xwiki-platform-mail-send</artifactId>
     <version>7.1.4</version>
   </parent>
+  <version>7.1.4-gene42</version>
   <packaging>jar</packaging>
   <artifactId>xwiki-platform-mail-send-default</artifactId>
   <name>XWiki Platform - Mail - Send - Default Implementation</name>
@@ -40,7 +41,7 @@
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-mail-send-api</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
     </dependency>
     <dependency>
       <groupId>org.xwiki.commons</groupId>
@@ -50,7 +51,7 @@
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-configuration-default</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
     </dependency>
     <dependency>
       <groupId>org.xwiki.platform</groupId>
@@ -62,7 +63,7 @@
       <artifactId>xwiki-commons-text</artifactId>
       <version>${commons.version}</version>
     </dependency>
-    <!-- Needed for working with XWikiStubContextProvider and XWikiRequest and by the Extension Manager to properly load some 
+    <!-- Needed for working with XWikiStubContextProvider and XWikiRequest and by the Extension Manager to properly load some
       components (e.g. DefaultXWikiStubContextProvider) -->
     <dependency>
       <groupId>javax.servlet</groupId>
@@ -71,12 +72,12 @@
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-model</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
     </dependency>
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-bridge</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
     </dependency>
     <!-- Test Dependencies -->
     <!-- Override the Servlet environment that is drawn by the oldcore dependency. This works because the

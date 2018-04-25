@@ -27,6 +27,7 @@
     <artifactId>xwiki-platform-extension</artifactId>
     <version>7.1.4</version>
   </parent>
+  <version>7.1.4-gene42</version>
   <artifactId>xwiki-platform-extension-script</artifactId>
   <name>XWiki Platform - Extension - Script</name>
   <packaging>jar</packaging>

@@ -27,6 +27,7 @@
     <artifactId>xwiki-platform-administration</artifactId>
     <version>7.1.4</version>
   </parent>
+  <version>7.1.4-gene42</version>
   <artifactId>xwiki-platform-administration-ui</artifactId>
   <name>XWiki Platform - Administration - UI</name>
   <packaging>xar</packaging>
@@ -42,27 +43,27 @@
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-rendering-macro-velocity</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-rendering-macro-include</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
       <scope>runtime</scope>
     </dependency>
     <!-- Needed for translations -->
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-localization-macro</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
       <scope>runtime</scope>
     </dependency>
     <!-- Needed by XWikiSkinsSheet.xml -->
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-attachment-ui</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
       <type>xar</type>
       <scope>runtime</scope>
     </dependency>

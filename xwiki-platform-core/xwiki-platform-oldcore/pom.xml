@@ -27,6 +27,7 @@
     <artifactId>xwiki-platform-core</artifactId>
     <version>7.1.4</version>
   </parent>
+  <version>7.1.4-gene42</version>
   <artifactId>xwiki-platform-oldcore</artifactId>
   <name>XWiki Platform - Old Core</name>
   <packaging>jar</packaging>
@@ -73,7 +74,7 @@
         </exclusion>
       </exclusions>
     </dependency>
-    
+
     <!-- Required by the XML-RPC implementation and tests.
          Hopefully they will eventually make it into a swizzle release. -->
     <dependency>
@@ -187,7 +188,7 @@
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-store-api</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
     </dependency>
 
     <!-- Authentication -->
@@ -272,7 +273,7 @@
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-url-scheme-filesystem</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
     </dependency>
 
     <!-- PDF export, image processing -->
@@ -330,7 +331,7 @@
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-mail-send-api</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
     </dependency>
     <dependency>
       <groupId>javax.mail</groupId>
@@ -388,12 +389,12 @@
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-observation-remote</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
     </dependency>
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-model</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
     </dependency>
     <!-- TODO: This dependency shouldn't be in this module since it means we're tying this module and all other
          modules using it to the Servlet environment, which is pretty bad. To be able to remove this dependency
@@ -402,17 +403,17 @@
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-velocity-webapp</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
     </dependency>
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-xmlrpc-model</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
     </dependency>
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-bridge</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
     </dependency>
     <dependency>
       <groupId>org.xwiki.rendering</groupId>
@@ -422,54 +423,54 @@
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-rendering-xwiki</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
     </dependency>
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-url-api</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
     </dependency>
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-display-api</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
     </dependency>
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-sheet-api</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
     </dependency>
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-skin-api</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
     </dependency>
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-template-api</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
     </dependency>
     <!-- Used by com.xpn.xwiki.web.CommentAction -->
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-captcha</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
     </dependency>
 
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-formula-renderer</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
     </dependency>
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-cache-api</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
     </dependency>
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-cache-infinispan</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
       <!-- Only needed at runtime since it's a component implementation -->
       <scope>runtime</scope>
     </dependency>
@@ -486,35 +487,35 @@
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-query-manager</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
     </dependency>
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-office-importer</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
     </dependency>
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-component-multi</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
       <!-- Only required at runtime (ie in the distribution) -->
       <scope>runtime</scope>
     </dependency>
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-query-xwql</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-csrf</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
     </dependency>
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-localization-api</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
     </dependency>
     <dependency>
       <groupId>org.xwiki.platform</groupId>
@@ -524,12 +525,12 @@
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-wiki-api</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
     </dependency>
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-resource-default</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
     </dependency>
 
     <!-- Used by HibernateDataMigrationManager to temporarily disable logback logging in hibernate -->
@@ -563,7 +564,7 @@
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-rendering-macro-script</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
       <type>test-jar</type>
       <scope>test</scope>
     </dependency>
@@ -571,37 +572,37 @@
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-rendering-macro-velocity</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
       <scope>test</scope>
     </dependency>
 
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-rendering-macro-groovy</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
       <scope>test</scope>
     </dependency>
 
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-xar</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
     </dependency>
 
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-filter-instance-api</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
     </dependency>
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-filter-instance-document</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
     </dependency>
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-filter-stream-xar</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
     </dependency>
 
     <!-- XWiki syntax parsers -->

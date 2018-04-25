@@ -27,6 +27,7 @@
     <artifactId>xwiki-platform-rendering-macros</artifactId>
     <version>7.1.4</version>
   </parent>
+  <version>7.1.4-gene42</version>
   <artifactId>xwiki-platform-rendering-macro-useravatar</artifactId>
   <name>XWiki Platform - Rendering - Macro - User Avatar</name>
   <description>Displays the avatar of a user, or a standard image noavatar.png if the user has no avatar</description>
@@ -41,7 +42,7 @@
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-bridge</artifactId>
-      <version>${project.version}</version>
+      <version>7.1.4</version>
     </dependency>
   </dependencies>
 </project>

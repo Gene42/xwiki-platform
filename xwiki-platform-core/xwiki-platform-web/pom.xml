@@ -27,6 +27,7 @@
     <artifactId>xwiki-platform-core</artifactId>
     <version>7.1.4</version>
   </parent>
+  <version>7.1.4-gene42</version>
   <artifactId>xwiki-platform-web</artifactId>
   <name>XWiki Platform - Web Resources</name>
   <packaging>war</packaging>
