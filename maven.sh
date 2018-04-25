@@ -20,7 +20,7 @@
 # ---------------------------------------------------------------------------
 
 set -e
-set +x 
+set +x
 
 action="${1}"
 
@@ -68,15 +68,15 @@ traverse() (
                 if [ "${module}" ]; then
                   #sed -e "s|<\!--<module>${module}</module>-->|<module>${module}</module>|g" -i "${pom_file}"
 
-                  echo "${current_folder}" >> ${output_temp}
+                  #echo "${current_folder}" >> ${output_temp}
                   has_any_sub_module="${module}"
                 fi
              fi
           done
 
-          if [ "${has_any_sub_module}" ]; then
-            echo "${module_dir}"
-          fi
+          #if [ "${has_any_sub_module}" ]; then
+          #  echo "${module_dir}"
+          #fi
       fi
    fi
 )
