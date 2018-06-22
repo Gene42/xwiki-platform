@@ -45,6 +45,8 @@ import org.xwiki.security.internal.XWikiBridge;
 @Singleton
 public class DefaultAuthorizationManager implements AuthorizationManager
 {
+    private static final String GROUPS_PREFIX = "xwiki:Groups";
+
     /** Logger. **/
     @Inject
     private Logger logger;
@@ -156,6 +158,11 @@ public class DefaultAuthorizationManager implements AuthorizationManager
         EntityReference entityReference, boolean check)
         throws AuthorizationException
     {
+        if (userReference != null && StringUtils.contains(userReference.toString(), GROUPS_PREFIX)) {
+            this.logger.warn("Tried to evaluate security access for group [{}] on entity [{}]: {}",
+                userReference, entityReference, Thread.currentThread().getStackTrace());
+        }
+
         SecurityAccess securityAccess = getAccess(
             securityReferenceFactory.newUserReference(userReference),
             securityReferenceFactory.newEntityReference(entityReference)
