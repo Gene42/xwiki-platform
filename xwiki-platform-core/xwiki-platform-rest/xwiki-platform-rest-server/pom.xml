@@ -25,9 +25,8 @@
   <parent>
     <groupId>org.xwiki.platform</groupId>
     <artifactId>xwiki-platform-rest</artifactId>
-    <version>7.1.4</version>
+    <version>7.1.5-SNAPSHOT</version>
   </parent>
-  <version>7.1.4-gene42</version>
   <artifactId>xwiki-platform-rest-server</artifactId>
   <packaging>jar</packaging>
   <name>XWiki Platform - REST - Server</name>
@@ -119,12 +118,12 @@
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-rest-model</artifactId>
-      <version>7.1.4</version>
+      <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-rest-api</artifactId>
-      <version>7.1.4</version>
+      <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>org.xwiki.platform</groupId>
@@ -134,7 +133,7 @@
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-wiki-user-api</artifactId>
-      <version>7.1.4</version>
+      <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>org.xwiki.commons</groupId>

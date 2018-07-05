@@ -43,7 +43,7 @@
   <artifactId>xwiki-platform</artifactId>
   <name>XWiki Platform - Parent POM</name>
   <packaging>pom</packaging>
-  <version>7.1.4</version>
+  <version>7.1.5-SNAPSHOT</version>
   <description>XWiki Platform - Parent POM</description>
   <properties>
     <!-- Useful for external Maven projects that extend the Platform POM. Must not be used by Platform project! -->
@@ -54,12 +54,14 @@
     <hsqldb.version>2.3.1</hsqldb.version>
     <!-- By default check that unit tests don't output anything to the console -->
     <xwiki.surefire.captureconsole.skip>false</xwiki.surefire.captureconsole.skip>
+    <!-- Skip enforcer -->
+    <xwiki.enforcer.skip>true</xwiki.enforcer.skip>
   </properties>
   <scm>
-    <connection>scm:git:git://github.com/xwiki/xwiki-platform.git</connection>
-    <developerConnection>scm:git:git@github.com:xwiki/xwiki-platform.git</developerConnection>
-    <url>https://github.com/xwiki/xwiki-platform/tree/master/</url>
-    <tag>stable-7.1.x</tag>
+    <connection>scm:git:git://github.com/Gene42/xwiki-platform.git</connection>
+    <developerConnection>scm:git:git@github.com:Gene42/xwiki-platform.git</developerConnection>
+    <url>https://github.com/Gene42/xwiki-platform/tree/master/</url>
+    <tag>HEAD</tag>
   </scm>
   <issueManagement>
     <system>jira</system>
@@ -251,5 +253,26 @@
         </dependencies>
       </plugin>
     </plugins>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-release-plugin</artifactId>
+          <configuration>
+            <preparationGoals>clean install</preparationGoals>
+            <pushChanges>false</pushChanges>
+            <autoVersionSubmodules>true</autoVersionSubmodules>
+            <localCheckout>true</localCheckout>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <configuration>
+            <additionalparam>-Xdoclint:none</additionalparam>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
   </build>
 </project>

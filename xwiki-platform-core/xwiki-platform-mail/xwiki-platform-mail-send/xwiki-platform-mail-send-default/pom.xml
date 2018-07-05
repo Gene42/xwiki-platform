@@ -25,9 +25,8 @@
   <parent>
     <groupId>org.xwiki.platform</groupId>
     <artifactId>xwiki-platform-mail-send</artifactId>
-    <version>7.1.4</version>
+    <version>7.1.5-SNAPSHOT</version>
   </parent>
-  <version>7.1.4-gene42</version>
   <packaging>jar</packaging>
   <artifactId>xwiki-platform-mail-send-default</artifactId>
   <name>XWiki Platform - Mail - Send - Default Implementation</name>
@@ -41,7 +40,7 @@
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-mail-send-api</artifactId>
-      <version>7.1.4</version>
+      <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>org.xwiki.commons</groupId>
@@ -51,7 +50,7 @@
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-configuration-default</artifactId>
-      <version>7.1.4</version>
+      <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>org.xwiki.platform</groupId>
@@ -72,12 +71,12 @@
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-model</artifactId>
-      <version>7.1.4</version>
+      <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-bridge</artifactId>
-      <version>7.1.4</version>
+      <version>${project.version}</version>
     </dependency>
     <!-- Test Dependencies -->
     <!-- Override the Servlet environment that is drawn by the oldcore dependency. This works because the
