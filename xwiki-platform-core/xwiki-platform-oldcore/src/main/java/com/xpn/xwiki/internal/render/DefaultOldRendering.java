@@ -184,6 +184,9 @@ public class DefaultOldRendering implements OldRendering
     @Override
     public String parseContent(String content, XWikiContext xcontext)
     {
+        if (xcontext == null || xcontext.getDoc() == null) {
+            return "";
+        } 
         try {
             if (StringUtils.isNotEmpty(content)) {
                 VelocityManager velocityManager = this.velocityManagerProvider.get();
