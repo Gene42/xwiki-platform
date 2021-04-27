@@ -25,7 +25,7 @@
 <configuration>
 
   <!-- Register SLF4J against the JMX MBean Server automatically -->
-   <jmxConfigurator objectName="logback:type=xwiki"/>
+  <jmxConfigurator objectName="logback:type=xwiki"/>
 
   <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
     <!-- Direct log messages to stdout -->
@@ -74,9 +74,6 @@
   <logger name="org.hibernate.connection.DriverManagerConnectionProvider" level="warn"/>
   <!-- Log prepared statement cache activity -->
   <logger name="org.hibernate.ps.PreparedStatementCache" level="warn"/>
-
-  <!-- Deactivate Struts warnings -->
-  <logger name="org.apache.struts.util.RequestUtils" level="error"/>
 
   <!-- Deactive PDF Export CSS Applier warnings -->
   <logger name="org.apache.fop.layoutmgr.inline.ContentLayoutManager" level="error"/>

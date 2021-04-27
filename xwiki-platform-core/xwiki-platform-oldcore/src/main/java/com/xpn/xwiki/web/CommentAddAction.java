@@ -46,6 +46,12 @@ public class CommentAddAction extends XWikiAction
     private static final String USER_SPACE_PREFIX = "XWiki.";
 
     @Override
+    protected Class<? extends XWikiForm> getFomClass()
+    {
+        return ObjectAddForm.class;
+    }
+
+    @Override
     public boolean action(XWikiContext context) throws XWikiException
     {
         // CSRF prevention
@@ -67,7 +73,6 @@ public class CommentAddAction extends XWikiAction
         } else {
             // className = XWiki.XWikiComments
             String className = baseclass.getName();
-            // Create a new comment object and mark the document as dirty.
             BaseObject object = doc.newObject(className, context);
             // TODO The map should be pre-filled with empty strings for all class properties, just like in
             // ObjectAddAction, so that properties missing from the request are still added to the database.

@@ -23,13 +23,13 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletRequestWrapper;
 
-import org.apache.struts.upload.MultipartRequestWrapper;
+import org.apache.struts2.dispatcher.multipart.MultiPartRequestWrapper;
 
 import com.xpn.xwiki.util.Util;
 
 /**
  * {@link HttpServletRequest} implementation with XWiki related specific behavior.
- * 
+ *
  * @version $Id$
  */
 public class XWikiServletRequest extends HttpServletRequestWrapper implements XWikiRequest
@@ -67,8 +67,8 @@ public class XWikiServletRequest extends HttpServletRequestWrapper implements XW
     {
         HttpServletRequest request = getHttpServletRequest();
         StringBuffer requestURL = request.getRequestURL();
-        if ((requestURL == null) && (request instanceof MultipartRequestWrapper)) {
-            requestURL = ((HttpServletRequest) ((MultipartRequestWrapper) request).getRequest()).getRequestURL();
+        if ((requestURL == null) && (request instanceof MultiPartRequestWrapper)) {
+            requestURL = ((HttpServletRequest) ((MultiPartRequestWrapper) request).getRequest()).getRequestURL();
         }
 
         return requestURL;
