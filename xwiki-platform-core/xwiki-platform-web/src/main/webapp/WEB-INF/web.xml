@@ -103,7 +103,7 @@
     <filter-class>org.xwiki.wysiwyg.server.filter.XWikiContextInitializationFilter</filter-class>
   </filter>
 
-  <!-- This filter is used to initialize the XWiki context before processing a REST request. -->
+  <!-- This filter is used to initialize the XWiki context before processing a XML-RPC request. -->
   <filter>
     <filter-name>XWikiXmlRpcContextInitializationFilter</filter-name>
     <filter-class>org.xwiki.wysiwyg.server.filter.XWikiContextInitializationFilter</filter-class>
