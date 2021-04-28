@@ -29,6 +29,9 @@
   <name>XWiki Platform - WYSIWYG Editor - Plugin API</name>
   <packaging>jar</packaging>
   <description>The API that is used to write plugins for the WYSIWYG editor.</description>
+  <properties>
+    <skipTests>true</skipTests>
+  </properties>
   <dependencies>
     <dependency>
       <groupId>com.google.gwt</groupId>

@@ -29,6 +29,9 @@
   <name>XWiki Platform - WYSIWYG Editor - Client Side</name>
   <packaging>jar</packaging>
   <description>The client side of XWiki's WYSIWYG editor. This is a reusable rich text editor all written in GWT.</description>
+  <properties>
+    <skipTests>true</skipTests>
+  </properties>
   <dependencies>
     <!-- GWT libraries -->
     <dependency>

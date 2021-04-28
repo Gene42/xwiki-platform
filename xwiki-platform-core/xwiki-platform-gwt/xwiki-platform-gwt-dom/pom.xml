@@ -29,6 +29,9 @@
   <name>XWiki Platform - GWT - DOM API</name>
   <packaging>jar</packaging>
   <description>An extension of the GWT DOM API, providing W3C Range and Selection support, depth-first pre-order iterator and lots of DOM utility methods</description>
+  <properties>
+    <skipTests>true</skipTests>
+  </properties>
   <dependencies>
     <dependency>
       <!-- This dependency is required for the custom linker (StandardsModeIFrameLinker.java). -->
